@@ -6,7 +6,6 @@ public class Destinatii {
 
     private Vector  destination;
     private Vector  myPachete;
-    private Vector  myPachete;
     private Vector  myPreturi;
     private Pachete myPachete;
     private Preturi myPreturi;
