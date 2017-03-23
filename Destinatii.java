@@ -2,7 +2,7 @@ import java.util.Vector;
 
 public class Destinatii {
 
-  public numeDestinatie String;
+  private String numeDestinatie ;
 
     private Vector  destination;
     private Vector  myPachete;
