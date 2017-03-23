@@ -1,10 +1,11 @@
 import java.util.Vector;
+import java.util.Date;
 
 public class mijlocDeCalatorie {
 
     private String nrMatricol;
 
-    private int dataPlecare;
+    private Date dataPlecare;
 
     private String numeDestinatie ;
 
