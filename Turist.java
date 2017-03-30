@@ -1,19 +1,21 @@
-import java.util.Date;
-import java.util.Vector;
+//package pachet1;
+package ip;
+import java.util.*;
 
 public class Turist extends Client {
 
-  private String numeDestinatie ;
+  public String numeDestinatie;
 
-  private String numeTransport ;
+  public String numeTransport;
 
-  private Date perioadaSejur ;
+  public Date perioadaSejur;
 
-    private mijlocDeCalatorie transport;
-    private Destinatii Locatie;
-    private Vector  myBD;
+    public MijlocDeTransport transport ;
+    public Destinatii Locatie;
+    public Vector  myBD;
 
-  public void getDestination() {
+  public String getDestination() {
+      return this.numeDestinatie;
   }
 
   public void getTransport() {
@@ -23,6 +25,15 @@ public class Turist extends Client {
   }
 
   public void Turist() {
+  }
+    // De testat 
+  public int Cerere(Ghid g){
+      String turistDest = this.getDestination();
+      String ghidDest = g.getLocation();
+      if(turistDest.equals(ghidDest))
+          if(g.getNrLocuriLibere()>0)
+              return 1;
+      return 0;
   }
 
 }
