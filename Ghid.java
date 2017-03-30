@@ -27,10 +27,6 @@ public class Ghid extends Persoana {
   public String getLocation() {
       return this.myDestinatii;
   }
-
-  public void setLocation(String s){
-      this.myDestinatii=s;
-  }
   
   public int getExperienta()
   {
@@ -44,6 +40,14 @@ public class Ghid extends Persoana {
   
   public int getNrLocuriLibere(){
       return this.nrLocuriLibere;
+  }
+  
+  public void setLocation(String s){
+      this.myDestinatii=s;
+  }
+  
+  public void LocOcupat(){
+      this.nrLocuriLibere--;
   }
   //
   public int getPrice() {
