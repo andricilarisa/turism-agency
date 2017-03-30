@@ -14,6 +14,10 @@ public class Turist extends Client {
     public Destinatii Locatie;
     public Vector  myBD;
 
+ public void setDestination(String s){
+     this.numeDestinatie=s;
+ }
+    
   public String getDestination() {
       return this.numeDestinatie;
   }
