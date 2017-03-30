@@ -28,6 +28,10 @@ public class Ghid extends Persoana {
       return this.myDestinatii;
   }
 
+  public void setLocation(String s){
+      this.myDestinatii=s;
+  }
+  
   public int getExperienta()
   {
       return this.Experienta;
