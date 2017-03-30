@@ -4,15 +4,15 @@ import java.util.Vector;
 
 public class MijlocDeTransport {
 
-    private String[] nrMatricol = new String[25];
+    public String[] nrMatricol = new String[25];
 
-    private int[] dataPlecare = new int[25];
+    public int[] dataPlecare = new int[25];
 
-    private String[] numeDestinatie = new String[25];
+    public String[] numeDestinatie = new String[25];
 
-    private String[] numeTransport = new String[25];
+    public String[] numeTransport = new String[25];
 
-    private int nrLocuri;
+    public int nrLocuri;
     private int nrPersoane;
 
     private Vector  myInterfataAplicatie;
@@ -45,6 +45,7 @@ public class MijlocDeTransport {
     
     public void checkPlace(String nrMatricol, String numeDestinatie, String numeTransport, int dataPlecare)
     {
+        int ok = 0;
         for(int i = 0; i < this.dataPlecare.length; ++i)
             if(this.dataPlecare[i] == dataPlecare)
             {
@@ -54,7 +55,7 @@ public class MijlocDeTransport {
                         for(int k = 0; k < numeTransport.length(); ++k)
                             if(this.numeTransport[j].equals(numeTransport))
                             {
-                                if(this.nrLocuri == 0) System.out.println("Nu mai sunt locuri disponibile! Va rugam selectati alta optiune!");
+                                if(this.nrLocuri == 0) ok = 1;
                                 else {
                                       this.nrLocuri--;
                                       this.nrMatricol[this.nrPersoane++] = nrMatricol;
@@ -62,5 +63,6 @@ public class MijlocDeTransport {
                             }
                     }   
             }
+        if(ok == 1) System.out.println("Nu mai sunt locuri disponibile! Va rugam selectati alta optiune!");
     }
 }
