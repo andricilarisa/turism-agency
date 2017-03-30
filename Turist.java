@@ -1,16 +1,17 @@
+import java.util.Date;
 import java.util.Vector;
 
 public class Turist extends Client {
 
-  public numeDestinatie String;
+  private String numeDestinatie ;
 
-  public numeTransport String;
+  private String numeTransport ;
 
-  public perioadaSejur date;
+  private Date perioadaSejur ;
 
-    public mijlocDeCalatorie transport;
-    public Destinatii Locatie;
-    public Vector  myBD;
+    private mijlocDeCalatorie transport;
+    private Destinatii Locatie;
+    private Vector  myBD;
 
   public void getDestination() {
   }
