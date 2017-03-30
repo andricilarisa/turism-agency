@@ -14,14 +14,6 @@ public class Turist extends Client {
     public Destinatii Locatie;
     public Vector  myBD;
 
- public void setDestination(String s){
-     this.numeDestinatie=s;
- }
-    
-  public String getDestination() {
-      return this.numeDestinatie;
-  }
-
   public void getTransport() {
   }
 
@@ -31,12 +23,24 @@ public class Turist extends Client {
   public void Turist() {
   }
     // De testat 
+  
+   public void setDestination(String s){
+     this.numeDestinatie=s;
+ }
+  
+    public String getDestination() {
+      return this.numeDestinatie;
+  }
+    
+    
   public int Cerere(Ghid g){
       String turistDest = this.getDestination();
       String ghidDest = g.getLocation();
       if(turistDest.equals(ghidDest))
           if(g.getNrLocuriLibere()>0)
+          {   g.LocOcupat();
               return 1;
+          }
       return 0;
   }
 
